@@ -1,0 +1,20 @@
+<% if !@all_messages.nil? %>
+  <% @all_messages.each do |message| %>
+    <div class="row" data-equalizer>
+      <div class="small-10 small-offset-1 columns">
+        <ul class="pricing-table" data-equalizer-watch>
+          <li class="title"><%= message.user.first_name %> <%= message.user.last_name %> - <%= message.created_at.strftime('%B %d, %Y') %> at <%= message.created_at.strftime('%I:%M %P') %></li>
+          <li class="price"><%= message.message %></li>
+          <%= render partial: 'show_comments', locals: { message: message } %>
+          <%= render partial: 'comment_form', locals: { message: message } %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <div class="row">
+    <div class="small-12">
+      <h1>There are no messages. Post the first message!</h1>
+    </div>
+  </div>  
+<% end %>

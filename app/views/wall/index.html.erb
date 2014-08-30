@@ -1,0 +1,22 @@
+<% if flash[:error] %>
+  <div class="row">
+    <div class="small-12 columns">
+      <p class="error"><%= flash[:error] %></p>
+    </div>
+  </div>
+<% end %>
+
+<div class="row">
+  <div class="small-12 columns">
+    <%= form_for(@message) do |m| %>
+      <fieldset>
+        <legend><h3>Post a Message</h3></legend>
+        <%= m.text_area :message, id: 'msg_box', autofocus: true %>
+        <%= m.submit 'Post a message', class: 'right button' %>
+      </fieldset>
+    <% end %>
+  </div>
+</div>
+
+<!-- messsages partial -->
+<%= render partial: 'show_messages' %>

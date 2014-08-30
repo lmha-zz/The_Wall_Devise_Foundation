@@ -1,0 +1,73 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+.top-bar {
+	background-color:dimgrey;
+	h1 {
+		color: white;
+	}
+}
+.top-bar-section ul li {
+	p {
+		padding: 10px 0;
+		margin: 0;
+		color: white;
+	}
+	background-color: dimgrey;
+}
+.error {
+	padding:0;
+	color:red;
+	margin: 20px 0 0 0;
+}
+.pricing-table .title {
+	text-align: left;
+	background-color: #484848;
+}
+.pricing-table .description {
+	text-align: right;
+	border-bottom:none;
+}
+.pricing-table .price {
+	font-size: 1.5rem;
+	text-align: left;
+}
+.pricing-table .bullet-item {
+	text-align: right;
+	height: 50px;
+	div {
+		height: 15px;
+		overflow-y: scroll;
+	}
+}
+.pricing-table .cta-button {
+	h5 {
+		text-align: left;
+	}
+	textarea {
+		resize: none;
+	}
+	height: 180px;
+}
+#msg_box {
+	resize: none;
+	height: 75px;
+}
+#welcome_message {
+	margin-right: 30px;
+}
+

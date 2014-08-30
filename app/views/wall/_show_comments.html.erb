@@ -1,0 +1,14 @@
+<% if !message.comments.nil? %>
+  <% message.comments.each do |comment| %>
+    <li class="description">
+      <div class="small-11 small-offset-1 columns">
+        <%= comment.user.first_name %> <%= comment.user.last_name %> - <%= comment.created_at.strftime('%B %d, %Y') %> at <%= comment.created_at.strftime('%I:%M %P') %>
+      </div>
+    </li>
+    <li class="bullet-item">
+      <div class="small-11 small-offset-1 columns">
+        <%= comment.comment %>
+      </div>
+    </li>
+  <% end %>
+<% end %>

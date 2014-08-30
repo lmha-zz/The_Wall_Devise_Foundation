@@ -1,0 +1,15 @@
+<nav class="top-bar foundation-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1>DojoWall</h1>
+    </li>
+  </ul>
+  <% if user_signed_in? %>
+    <section class="top-bar-section">
+      <ul class="right">
+        <li id="welcome_message"><p>Welcome <%= current_user.first_name %>!</p></li>
+        <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+      </ul>
+    </section>
+  <% end %>
+</nav>
